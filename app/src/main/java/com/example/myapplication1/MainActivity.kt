@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
         bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_cases)
         //bitmap = BitmapFactory.decodeResource(getResources(), ContextCompat.getDrawable(R.drawable.ic_launcher_foreground));
-        var point = LatLng(54.70411329729895, 20.569521063966448)
-        mMap.addMarker(MarkerOptions().position(point).title("Home").snippet("Крутая достопримечательность"))//?.setIcon(BitmapDescriptorFactory.fromBitmap(bitmap))
+        var srt = LatLng(54.70615456969216, 20.504339695031547)
+        mMap.addMarker(MarkerOptions().position(srt).title("СРТ-129").snippet("Крутая достопримечательность, просто вау"))//?.setIcon(BitmapDescriptorFactory.fromBitmap(bitmap))
         mMap.isBuildingsEnabled = true
         //mMap.isIndoorEnabled = false
         mMap.mapType = GoogleMap.MAP_TYPE_HYBRID
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
         mMap.setMinZoomPreference(1f)
 
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(point, 20f))
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(srt, 20f))
 
 
     }
